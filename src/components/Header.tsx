@@ -8,10 +8,11 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <div className="bg-red-600 text-white px-3 py-2 rounded-md font-bold">
-              M
-            </div>
-            <span className="ml-2 text-xl font-bold text-gray-800">MAHALO.MA</span>
+            <img 
+              src="/lovable-uploads/3bcc8be4-2643-4d7d-a8c1-ee68ad2977c6.png" 
+              alt="MAHALO.MA" 
+              className="h-10 w-auto"
+            />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
