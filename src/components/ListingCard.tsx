@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ListingCardProps {
   id: string;
@@ -13,7 +14,7 @@ interface ListingCardProps {
   category: string;
 }
 
-export function ListingCard({ title, price, image, location, time, category }: ListingCardProps) {
+export function ListingCard({ id, title, price, image, location, time, category }: ListingCardProps) {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative">
@@ -37,9 +38,11 @@ export function ListingCard({ title, price, image, location, time, category }: L
           {price}
         </div>
         
-        <Button className="w-full bg-red-600 hover:bg-red-700 text-white mb-3">
-          Afficher l'annonce
-        </Button>
+        <Link to={`/annonce/${id}`}>
+          <Button className="w-full bg-red-600 hover:bg-red-700 text-white mb-3">
+            Afficher l'annonce
+          </Button>
+        </Link>
         
         <div className="flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center">
